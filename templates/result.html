@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <div class="result-card">
+            {% if churn == 'No' %}
+                <div class="no-churn">
+                    <h2>Customer will NOT Churn</h2>
+                    <div class="prob">Churn Probability: {{ probability }}</div>
+                </div>
+            {% else %}
+                <div class="churn">
+                    <h2>⚠️ Customer will Churn</h2>
+                    <div class="prob">Churn Probability: {{ probability }}</div>
+                </div>
+            {% endif %}
+        </div>
+        <div class="input-summary">
+            <h3>Input Features:</h3>
+            <ul>
+                <li>Gender: {{ data.gender }}</li>
+                <li>Senior Citizen: {{ data.SeniorCitizen }}</li>
+                <li>Partner: {{ data.Partner }}</li>
+                <li>Dependents: {{ data.Dependents }}</li>
+                <li>Tenure: {{ data.tenure }} months</li>
+                <li>Phone Service: {{ data.PhoneService }}</li>
+                <li>Paperless Billing: {{ data.PaperlessBilling }}</li>
+                <li>Monthly Charges: ${{ data.MonthlyCharges }}</li>
+                <li>Total Charges: ${{ data.TotalCharges }}</li>
+                <li>Contract: {{ data.Contract }}</li>
+                <li>Internet Service: {{ data.InternetService }}</li>
+            </ul>
+        </div>
+        <a href="/" class="back-btn">← Predict Another</a>
+    </div>
+</body>
+</html>

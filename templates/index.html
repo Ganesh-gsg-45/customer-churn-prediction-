@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Churn Prediction</h1>
+        <p>Predict if a customer will churn using Telco dataset features.</p>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label>Gender:</label>
+                <select name="gender" required>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Senior Citizen (0/1):</label>
+                <select name="SeniorCitizen" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Partner:</label>
+                <select name="Partner" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Dependents:</label>
+                <select name="Dependents" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Tenure (months):</label>
+                <input type="number" name="tenure" min="0" max="72" required>
+            </div>
+            <div class="form-group">
+                <label>Phone Service:</label>
+                <select name="PhoneService" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Paperless Billing:</label>
+                <select name="PaperlessBilling" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Monthly Charges ($):</label>
+                <input type="number" name="MonthlyCharges" step="0.01" min="0" required>
+            </div>
+            <div class="form-group">
+                <label>Total Charges ($):</label>
+                <input type="number" name="TotalCharges" step="0.01" min="0" required>
+            </div>
+            <div class="form-group">
+                <label>Contract:</label>
+                <select name="Contract" required>
+                    <option value="Month-to-month">Month-to-month</option>
+                    <option value="One year">One year</option>
+                    <option value="Two year">Two year</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Internet Service:</label>
+                <select name="InternetService" required>
+                    <option value="DSL">DSL</option>
+                    <option value="Fiber optic">Fiber optic</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <button type="submit">Predict Churn</button>
+        </form>
+    </div>
+</body>
+</html>
