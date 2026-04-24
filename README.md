@@ -1,11 +1,11 @@
 # Customer Churn Prediction Web App 🚀
 
-Telco customer churn prediction using Random Forest (80.6% accuracy). Flask app with beautiful HTML/CSS UI.
+Telco customer churn prediction (80.6% RF accuracy). Flask + HTML/CSS + Docker.
 
-## 📁 Project Structure
+## 📁 Structure
 ```
 .
-├── app.py                 # Flask backend
+├── app
 ├── train_model.py         # Model training & pickle generation
 ├── requirements.txt       # Dependencies
 ├── models/                # Trained models
@@ -42,7 +42,4 @@ python app.py            # Start server
 - **Accuracy:** 80.6% on test set
 - **Features:** 21 total (10 key in form, others default 'No')
 
-##  Quick Demo
-Fill form → Predict → See churn risk with probability & input summary!
 
-Built by BLACKBOXAI ✨

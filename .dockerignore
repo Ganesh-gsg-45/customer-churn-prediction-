@@ -1,0 +1,27 @@
+# Git
+.git
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+venv/
+env/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Data/Models (copied into container)
+*.csv
+note.ipynb
+
+
+# Logs
+*.log
