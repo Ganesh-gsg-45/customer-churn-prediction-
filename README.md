@@ -41,5 +41,9 @@ python app.py            # Start server
 - **Preprocessing:** OneHotEncoder (cat) + StandardScaler (num)
 - **Accuracy:** 80.6% on test set
 - **Features:** 21 total (10 key in form, others default 'No')
-
+##  Model Details
+- **Dataset:** WA_Fn-UseC_-Telco-Customer-Churn.csv (../datasets/)
+- **Preprocessing:** OneHotEncoder (cat) + StandardScaler (num)
+- **Accuracy:** 80.6% on test set
+- **Features:** 21 total (10 key in form, others default 'No')
 
